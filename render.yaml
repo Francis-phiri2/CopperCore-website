@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: coppercore-industrial
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: coppercore-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DATABASE_PATH
+        value: /app/data/coppercore.sqlite
+      - key: ADMIN_TOKEN
+        generateValue: true
