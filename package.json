@@ -1,8 +1,8 @@
 {
-  "name": "coppercore-industrial-supplies-demo",
+  "name": "coppercore-industrial-supplies",
   "version": "1.0.0",
   "private": true,
-  "description": "Full-stack fictional corporate website concept by Mawu Creatives",
+  "description": "Full-stack corporate website for CopperCore Industrial Supplies Ltd",
   "type": "module",
   "scripts": {
     "start": "node server.js",

@@ -100,7 +100,7 @@ app.post('/api/enquiries', enquiryLimiter, (req, res) => {
   try {
     const { website: _website, ...enquiry } = parsed.data;
     const result = insertEnquiry.run(enquiry);
-    return res.status(201).json({ ok: true, id: result.lastInsertRowid.toString(), message: 'Thank you. Your enquiry has been saved in this website demonstration.' });
+    return res.status(201).json({ ok: true, id: result.lastInsertRowid.toString(), message: 'Thank you for your enquiry. Our procurement team will review your specifications and contact you shortly.' });
   } catch (error) {
     console.error('Could not save enquiry:', error.message);
     return res.status(500).json({ error: 'We could not save your enquiry. Please try again later.' });
